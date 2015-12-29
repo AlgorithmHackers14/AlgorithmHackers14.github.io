@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>title | Algorithm Hackers</title>
+  <title>article-format | Algorithm Hackers</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="h1h2h3h4h5h6">
+  <meta name="description" content="关于书写文档的格式说明">
 <meta property="og:type" content="article">
-<meta property="og:title" content="title">
-<meta property="og:url" content="http://Hearen.github.io/AlgorithmHackers/2015/12/29/title/index.html">
+<meta property="og:title" content="article-format">
+<meta property="og:url" content="http://Hearen.github.io/AlgorithmHackers/2015/12/29/article-format/index.html">
 <meta property="og:site_name" content="Algorithm Hackers">
-<meta property="og:description" content="h1h2h3h4h5h6">
-<meta property="og:updated_time" content="2015-12-29T14:08:35.636Z">
+<meta property="og:description" content="关于书写文档的格式说明">
+<meta property="og:updated_time" content="2015-12-29T14:46:47.280Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="title">
-<meta name="twitter:description" content="h1h2h3h4h5h6">
+<meta name="twitter:title" content="article-format">
+<meta name="twitter:description" content="关于书写文档的格式说明">
   
     <link rel="alternative" href="/atom.xml" title="Algorithm Hackers" type="application/atom+xml">
   
@@ -107,7 +107,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/markdown/" style="font-size: 20px;">markdown</a> <a href="/tags/web/" style="font-size: 10px;">web</a>
+                        <a href="/tags/使用说明/" style="font-size: 10px;">使用说明</a>
                     </div>
                 </section>
                 
@@ -169,11 +169,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-title" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-article-format" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/12/29/title/" class="article-date">
-      <time datetime="2015-12-29T14:08:08.000Z" itemprop="datePublished">2015-12-29</time>
+      <a href="/2015/12/29/article-format/" class="article-date">
+      <time datetime="2015-12-29T14:45:32.000Z" itemprop="datePublished">2015-12-29</time>
 </a>
     </div>
   
@@ -186,7 +186,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      title
+      article-format
     </h1>
   
 
@@ -196,6 +196,10 @@
         
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/使用说明/">使用说明</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -203,7 +207,26 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="h1"><a href="#h1" class="headerlink" title="h1"></a>h1</h1><h2 id="h2"><a href="#h2" class="headerlink" title="h2"></a>h2</h2><h3 id="h3"><a href="#h3" class="headerlink" title="h3"></a>h3</h3><h4 id="h4"><a href="#h4" class="headerlink" title="h4"></a>h4</h4><h5 id="h5"><a href="#h5" class="headerlink" title="h5"></a>h5</h5><h6 id="h6"><a href="#h6" class="headerlink" title="h6"></a>h6</h6>
+        <p>##文档头部<code>Front-matter</code><br>在文档头部添加一些关于文档的信息，语法是<code>yaml</code>（和<code>json</code>类似，需要注意每个字段的冒号后面必有空格，多个值的字段，每个值需要用’’-‘’开头，后面也必有空格），例如：<br><code>title</code>题目<br><code>description</code>描述（这个描述会在博客首页中显示）<br><code>tags</code>标签（最好写上题目的类别，也可写上作者名）<br><code>categories</code>分类（可根据week来分类，比如：week4），如果有多个分类则分类的顺序即为层次</p>
+<p>详见：<a href="https://hexo.io/zh-cn/docs/front-matter.html" target="_blank" rel="external">hexo文档</a></p>
+<h2 id="u6587_u6863_u5185_u5BB9"><a href="#u6587_u6863_u5185_u5BB9" class="headerlink" title="文档内容"></a>文档内容</h2><h3 id="u9898_u76EE"><a href="#u9898_u76EE" class="headerlink" title="题目"></a>题目</h3><p>使用<code>Markdown</code>规定的题目写法来书写子题目，建议：<br>一级题目（如：# 题目 #）对应文章标题，也可省略<br>二级题目（如：## 子题目 ##） 对应文章子题目<br>题目可以自动生成目录，可在页面左下角查看。</p>
+<h3 id="u56FE_u7247"><a href="#u56FE_u7247" class="headerlink" title="图片"></a>图片</h3><p>目前如果想上传图片可上传到自己的图床（如：imgur，七牛等），然后依照<code>Markdown</code>插入图片链接的格式添加到md文件中。以后可能会添加图片支持</p>
+<h3 id="u5173_u4E8E_u8BC4_u8BBA_u529F_u80FD"><a href="#u5173_u4E8E_u8BC4_u8BBA_u529F_u80FD" class="headerlink" title="关于评论功能"></a>关于评论功能</h3><p><strong>之后会添加多说评论框，方便交流</strong></p>
+<h2 id="u603B_u4F53_u793A_u4F8B"><a href="#u603B_u4F53_u793A_u4F8B" class="headerlink" title="总体示例"></a>总体示例</h2><p>例如：</p>
+<blockquote>
+<p>-–<br>title: The title of the article<br>description:  “Abstract of the article should be displayed in the main page. Must be quoted by <code>&quot;&quot;</code>“<br>tags:<br>- stack<br>- pointer<br>categories:<br>- week4<br>-–<br>Welcome to [Hexo](<a href="https://hexo.io/)!" target="_blank" rel="external">https://hexo.io/)!</a> This is your very first post. Check [documentation](<a href="https://hexo.io/docs/" target="_blank" rel="external">https://hexo.io/docs/</a>) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](<a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">https://hexo.io/docs/troubleshooting.html</a>) or you can ask me on [GitHub](<a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">https://github.com/hexojs/hexo/issues</a>).</p>
+<p>## Quick Start</p>
+<p>### Create a new post</p>
+<p>\<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;\$ hexo new <span class="string">"My New Post"</span></span><br><span class="line">&gt;\</span><br></pre></td></tr></table></figure></p>
+<p>More info: [Writing](<a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">https://hexo.io/docs/writing.html</a>)</p>
+<p>### Run server</p>
+<p>\<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;\$ hexo server</span><br><span class="line">&gt;\</span><br></pre></td></tr></table></figure></p>
+<p>More info: [Server](<a href="https://hexo.io/docs/server.html" target="_blank" rel="external">https://hexo.io/docs/server.html</a>)</p>
+<p>\ ### Generate static files</p>
+<p>\<figure class="highlight bash"><figcaption><span>$ hexo generate ```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; </span><br><span class="line">&gt; More info: \[Generating\](https://hexo.io/docs/generating.html)</span><br><span class="line">&gt; </span><br><span class="line">&gt; \<span class="comment">### Deploy to remote sites</span></span><br><span class="line">&gt; </span><br><span class="line">&gt; \``` bash $ hexo deploy \</span><br></pre></td></tr></table></figure></p>
+<p>More info:[Deployment](<a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">https://hexo.io/docs/deployment.html</a>)</p>
+</blockquote>
+
       
     </div>
     
@@ -211,13 +234,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2015/12/29/title/">title</a></p>
+        <p><span>本文标题:</span><a href="/2015/12/29/article-format/">article-format</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Algorithm Hackers 的个人博客">Algorithm Hackers</a></p>
-        <p><span>发布时间:</span>2015年12月29日 - 22时08分</p>
-        <p><span>最后更新:</span>2015年12月29日 - 22时08分</p>
+        <p><span>发布时间:</span>2015年12月29日 - 22时45分</p>
+        <p><span>最后更新:</span>2015年12月29日 - 22时46分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2015/12/29/title/" title="title">http://Hearen.github.io/AlgorithmHackers/2015/12/29/title/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://Hearen.github.io/AlgorithmHackers/2015/12/29/title/　　作者: Algorithm Hackers" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2015/12/29/article-format/" title="article-format">http://Hearen.github.io/AlgorithmHackers/2015/12/29/article-format/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://Hearen.github.io/AlgorithmHackers/2015/12/29/article-format/　　作者: Algorithm Hackers" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -228,23 +251,12 @@
 
 
 
-    <nav id="article-nav">
-        
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2015/12/29/hello-world/">
-                    Hello World
-                </a>
-            </div>
-        
-    </nav>
-
   
 </article>
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#h1"><span class="toc-number">1.</span> <span class="toc-text">h1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#h2"><span class="toc-number">1.1.</span> <span class="toc-text">h2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#h3"><span class="toc-number">1.1.1.</span> <span class="toc-text">h3</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#h4"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">h4</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#h5"><span class="toc-number">1.1.1.1.1.</span> <span class="toc-text">h5</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#h6"><span class="toc-number">1.1.1.1.1.1.</span> <span class="toc-text">h6</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u6587_u6863_u5185_u5BB9"><span class="toc-number">1.</span> <span class="toc-text">文档内容</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u9898_u76EE"><span class="toc-number">1.1.</span> <span class="toc-text">题目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u56FE_u7247"><span class="toc-number">1.2.</span> <span class="toc-text">图片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u5173_u4E8E_u8BC4_u8BBA_u529F_u80FD"><span class="toc-number">1.3.</span> <span class="toc-text">关于评论功能</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u603B_u4F53_u793A_u4F8B"><span class="toc-number">2.</span> <span class="toc-text">总体示例</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -317,13 +329,11 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2015/12/29/hello-world/" title="下一篇: Hello World">
-                <i class="fa fa-angle-right"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2015/12/29/title/">title</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/29/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/29/demo/">定制Stackedit</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2015/12/29/article-format/">article-format</a></li></ul>
     <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");
