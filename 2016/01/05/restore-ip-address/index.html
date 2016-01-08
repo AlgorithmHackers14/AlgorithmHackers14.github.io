@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://AlgorithmHackers14.github.io/2016/01/05/restore-ip-address/index.html">
 <meta property="og:site_name" content="Algorithm Hackers">
 <meta property="og:description" content="这题就是要寻找分割字符串的3个点的位置，假设用a=(a1,a2,a3)表示一组解，ai（i=1,2,3）分别表示第i点前面有几个字符，例如字符串“25525511137”中一个解为255.255.111.37这对应的解向量为a=（3,3,3）；根据题意，可以知道ai可取的值只有1,2,3，依次尝试各个值，ai的取值组合构成了一颗解空间树，用DFS搜索这棵树得到所有可行解。">
-<meta property="og:updated_time" content="2016-01-05T05:56:32.592Z">
+<meta property="og:updated_time" content="2016-01-07T09:52:32.697Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="93.Restore IP Addresses">
 <meta name="twitter:description" content="这题就是要寻找分割字符串的3个点的位置，假设用a=(a1,a2,a3)表示一组解，ai（i=1,2,3）分别表示第i点前面有几个字符，例如字符串“25525511137”中一个解为255.255.111.37这对应的解向量为a=（3,3,3）；根据题意，可以知道ai可取的值只有1,2,3，依次尝试各个值，ai的取值组合构成了一颗解空间树，用DFS搜索这棵树得到所有可行解。">
@@ -107,7 +107,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/Backtracking/" style="font-size: 20px;">Backtracking</a> <a href="/tags/Hash-Table/" style="font-size: 10px;">Hash Table</a> <a href="/tags/LHearen/" style="font-size: 20px;">LHearen</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/SheYi/" style="font-size: 10px;">SheYi</a> <a href="/tags/String/" style="font-size: 10px;">String</a> <a href="/tags/使用说明/" style="font-size: 10px;">使用说明</a>
+                        <a href="/tags/Backtracking/" style="font-size: 20px;">Backtracking</a> <a href="/tags/Depth-first-Search/" style="font-size: 10px;">Depth-first Search</a> <a href="/tags/DuanShikai/" style="font-size: 10px;">DuanShikai</a> <a href="/tags/Hash-Table/" style="font-size: 10px;">Hash Table</a> <a href="/tags/LHearen/" style="font-size: 20px;">LHearen</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/SheYi/" style="font-size: 10px;">SheYi</a> <a href="/tags/String/" style="font-size: 10px;">String</a> <a href="/tags/Tree/" style="font-size: 10px;">Tree</a> <a href="/tags/使用说明/" style="font-size: 10px;">使用说明</a>
                     </div>
                 </section>
                 
@@ -195,7 +195,7 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/week5/">week5</a>
+    <a class="article-category-link" href="/categories/week-5/">week-5</a>
     </div>
 
 
@@ -230,7 +230,7 @@
         <p><span>本文标题:</span><a href="/2016/01/05/restore-ip-address/">93.Restore IP Addresses</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Algorithm Hackers 的个人博客">Algorithm Hackers</a></p>
         <p><span>发布时间:</span>2016年01月05日 - 13时49分</p>
-        <p><span>最后更新:</span>2016年01月05日 - 13时56分</p>
+        <p><span>最后更新:</span>2016年01月07日 - 17时52分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/01/05/restore-ip-address/" title="93.Restore IP Addresses">http://AlgorithmHackers14.github.io/2016/01/05/restore-ip-address/</a>
             <span class="copy-path" data-clipboard-text="原文: http://AlgorithmHackers14.github.io/2016/01/05/restore-ip-address/　　作者: Algorithm Hackers" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -245,6 +245,12 @@
 
 
     <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2016/01/08/populating-next-right-pointers-in-each-node/">
+                    116. Populating Next Right Pointers In Each Node
+                </a>
+            </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
@@ -327,7 +333,9 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2016/01/08/populating-next-right-pointers-in-each-node/" title="上一篇: 116. Populating Next Right Pointers In Each Node">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
@@ -339,7 +347,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/01/05/restore-ip-address/">93.Restore IP Addresses</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/04/max-points-on-line/">149.Max points on line</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/04/n-queens2/">52.N-queens II</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/29/article-format/">文档格式说明</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/01/08/populating-next-right-pointers-in-each-node/">116. Populating Next Right Pointers In Each Node</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/05/restore-ip-address/">93.Restore IP Addresses</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/04/max-points-on-line/">149.Max points on line</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/01/04/n-queens2/">52.N-queens II</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/12/29/article-format/">文档格式说明</a></li></ul>
     <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");

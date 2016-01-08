@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>149.Max points on line | Algorithm Hackers</title>
+  <title>116. Populating Next Right Pointers In Each Node | Algorithm Hackers</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="One intrinsic solution to this problem is to use three loops to traverse and find them all, during which we are going to find the line equation determined by two points and then check the last one in">
+  <meta name="description" content="Given a binary tree Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL.Initially, all next pointers are set to NULL.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="149.Max points on line">
-<meta property="og:url" content="http://AlgorithmHackers14.github.io/2016/01/04/max-points-on-line/index.html">
+<meta property="og:title" content="116. Populating Next Right Pointers In Each Node">
+<meta property="og:url" content="http://AlgorithmHackers14.github.io/2016/01/08/populating-next-right-pointers-in-each-node/index.html">
 <meta property="og:site_name" content="Algorithm Hackers">
-<meta property="og:description" content="One intrinsic solution to this problem is to use three loops to traverse and find them all, during which we are going to find the line equation determined by two points and then check the last one in">
-<meta property="og:updated_time" content="2016-01-05T05:52:27.274Z">
+<meta property="og:description" content="Given a binary tree Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL.Initially, all next pointers are set to NULL.">
+<meta property="og:image" content="http://AlgorithmHackers14.github.io/img/116_001.png">
+<meta property="og:image" content="http://AlgorithmHackers14.github.io/img/116_002.png">
+<meta property="og:updated_time" content="2016-01-08T09:39:09.300Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="149.Max points on line">
-<meta name="twitter:description" content="One intrinsic solution to this problem is to use three loops to traverse and find them all, during which we are going to find the line equation determined by two points and then check the last one in">
+<meta name="twitter:title" content="116. Populating Next Right Pointers In Each Node">
+<meta name="twitter:description" content="Given a binary tree Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL.Initially, all next pointers are set to NULL.">
   
     <link rel="alternative" href="/atom.xml" title="Algorithm Hackers" type="application/atom+xml">
   
@@ -169,11 +171,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-max-points-on-line" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-populating-next-right-pointers-in-each-node" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/04/max-points-on-line/" class="article-date">
-      <time datetime="2016-01-04T10:32:04.000Z" itemprop="datePublished">2016-01-04</time>
+      <a href="/2016/01/08/populating-next-right-pointers-in-each-node/" class="article-date">
+      <time datetime="2016-01-08T09:30:08.000Z" itemprop="datePublished">2016-01-08</time>
 </a>
     </div>
   
@@ -186,7 +188,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      149.Max points on line
+      116. Populating Next Right Pointers In Each Node
     </h1>
   
 
@@ -195,13 +197,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/week-2/">week-2</a>
+    <a class="article-category-link" href="/categories/week-6/">week-6</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hash-Table/">Hash Table</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LHearen/">LHearen</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Math/">Math</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Depth-first-Search/">Depth-first Search</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DuanShikai/">DuanShikai</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tree/">Tree</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -211,19 +213,45 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h4 id="Max_Points_on_a_Line"><a href="#Max_Points_on_a_Line" class="headerlink" title="Max Points on a Line"></a>Max Points on a Line</h4><p><em>Author      : LHearen</em></p>
-<p><em>E-mail      : LHearen@126.com</em></p>
-<p><em>Time        : 2015-12-29 20:30</em></p>
-<p><em>Description : Given n points on a 2D plane, find the maximum number of points that lie on the same straight line.</em></p>
-<p><em>Source      : <a href="https://leetcode.com/problems/max-points-on-a-line/" target="_blank" rel="external">https://leetcode.com/problems/max-points-on-a-line/</a></em></p>
-<h5 id="Prefix"><a href="#Prefix" class="headerlink" title="Prefix"></a>Prefix</h5><p>One intrinsic solution to this problem is to use three loops to traverse and find them all, during which we are going to find the line equation determined by two points and then check the last one in the innermost loop; but using two points to get the line equation is quite inconvenient and inefficient so we need to search for another method that can be used more easily - at last we find out determine whether three points in one line or not can simply determined by slope and one fixed point, by the way the slope must be calculated with the fixed point.</p>
-<h5 id="Attention"><a href="#Attention" class="headerlink" title="Attention"></a>Attention</h5><p>To completely solve this problem, we have to care for several details:</p>
-<ol>
-<li>calculating the slope might encounter underflow;</li>
-<li>overlapped points should be handled separately;</li>
-</ol>
-<h5 id="Code_in_C"><a href="#Code_in_C" class="headerlink" title="Code in C"></a>Code in C</h5><p><em>AC with 20ms</em><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isEqual</span><span class="params">(<span class="keyword">struct</span> Point pA, <span class="keyword">struct</span> Point pB)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> pA.x == pB.x &amp;&amp; pA.y == pB.y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">slopeEqual</span><span class="params">(<span class="keyword">struct</span> Point pA, <span class="keyword">struct</span> Point pB, <span class="keyword">struct</span> Point pC)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(pA.y == pB.y || pA.y == pC.y)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(pA.y == pB.y &amp;&amp; pA.y == pC.y)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="comment">//in case of repitition;</span></span><br><span class="line">        <span class="keyword">if</span>(pA.y == pB.y &amp;&amp; pA.x == pB.x)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">if</span>(pA.y == pC.y &amp;&amp; pA.x == pC.x)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>((<span class="keyword">double</span>)(pA.x - pB.x) / (pA.y - pB.y) == (<span class="keyword">double</span>)(pA.x - pC.x) / (pA.y - pC.y))</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">maxPoints</span><span class="params">(<span class="keyword">struct</span> Point* points, <span class="keyword">int</span> pointsSize)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(pointsSize &lt; <span class="number">3</span>)</span><br><span class="line">        <span class="keyword">return</span> pointsSize;</span><br><span class="line">    <span class="keyword">int</span> count = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> max = <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; pointsSize; i++)</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; pointsSize; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//collect the repeated points between i and j;</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> h = i + <span class="number">1</span>; h &lt; j; h++)</span><br><span class="line">                <span class="keyword">if</span>(isEqual(points[i], points[h]))</span><br><span class="line">                    count++;</span><br><span class="line">            <span class="comment">//find a different point;</span></span><br><span class="line">            <span class="comment">//all the same will be skipped and counted;</span></span><br><span class="line">            <span class="keyword">for</span>(;j &lt; <span class="function">pointsSize &amp;&amp; <span class="title">isEqual</span><span class="params">(points[i], points[j])</span></span>; j++, count++);</span><br><span class="line">            <span class="comment">//the first different point;</span></span><br><span class="line">            <span class="keyword">if</span>(j &lt; pointsSize)</span><br><span class="line">                count++; </span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> k = j + <span class="number">1</span>; k &lt; pointsSize; k++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">//save invalid checking loop;</span></span><br><span class="line">                <span class="keyword">if</span>(max &gt; count + pointsSize - k + <span class="number">1</span>)</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">if</span>(slopeEqual(points[i], points[j], points[k]))</span><br><span class="line">                    count++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(count &gt; max)</span><br><span class="line">                max = count;</span><br><span class="line">            count = <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> max;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h5 id="Additional"><a href="#Additional" class="headerlink" title="Additional"></a>Additional</h5><p>There must be some better solutions to this problem, if you’ve got one, please never hesitate to inform me of that, so many thanks in advance!</p>
+        <h2 id="Problem_URL"><a href="#Problem_URL" class="headerlink" title="Problem URL"></a>Problem URL</h2><p><a href="https://leetcode.com/problems/populating-next-right-pointers-in-each-node/" target="_blank" rel="external">Populating Next Right Pointers in Each Node</a></p>
+<h2 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h2><p>Given a binary tree<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> TreeLinkNode &#123;</span><br><span class="line">   TreeLinkNode *left;</span><br><span class="line">   TreeLinkNode *right;</span><br><span class="line">   TreeLinkNode *next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Populate each next pointer to point to its next right node. If there is no next right node, the next<br>pointer should be set to NULL.Initially, all next pointers are set to NULL.</p>
+<p><strong>Note</strong></p>
+<ul>
+<li>You may only use constant extra space.</li>
+<li>You may assume that it is a perfect binary tree (ie, all leaves are at the same level, and every parent has two children).</li>
+</ul>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>When we solve the problem about Tree, we always think of recursion. Fortunately the tree is a perfect binary tree, so we can use many of its quality. We assume that a general tree is like this</p>
+<pre><code>     1
+   /  \
+  2    3
+ / \  / \
+4  5  6  7
+</code></pre><p>the root 1 element has two children 2 and 3, they also have their own children, in order to line their children together, we have to do four things:</p>
+<ul>
+<li>line 2 and 3 together (2-&gt;3)</li>
+<li>line 2’s children 4 and 5 together (4-&gt;5)</li>
+<li>line 2’s right children 5 and 3’s left children 6 together (5-&gt;6)</li>
+<li>line 3’s children 6 and 7 together (6-&gt;7)</li>
+</ul>
+<p>do those steps recursion, we can generate the whole tree. Here is the program in java.</p>
+<p><strong>program-01</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">connect</span><span class="params">(TreeLinkNode left,TreeLinkNode right)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(left!=<span class="keyword">null</span> &amp;&amp; right!=<span class="keyword">null</span>)&#123;</span><br><span class="line">		left.next=right;</span><br><span class="line">		connect(left.left,left.right);</span><br><span class="line">		connect(left.right,right.left);</span><br><span class="line">		connect(right.left,right.right);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Let’s explain them more detail. Imagine a larger tree who’s specific layer is like this</p>
+<p><img src="/img/116_001.png" alt=""><br>when we use function connect(a,b), we can connect a and b and both their children, and the function connect(b,c) will also connect b and c and their children at the same time, by this way, we will connect this layer node together. Its sample and useful.</p>
+<hr>
+<p>But what if the tree is not a perfect tree? Maybe some children will not exists, so how can we connect them if they even not exists? Or can we modify this method and use the same idea to fix imperfect tree? The answer is NO (Why ? hiahia~).</p>
+<p>So the next change is how to deal with the imperfect tree? Also see the problem in leedcode <a href="https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/" target="_blank" rel="external">117. Populating Next Right Pointers in Each Node II</a><br>Here we use Level Traverse.</p>
+<p>Suppose we have come to this situation<br><img src="/img/116_002.png" alt=""></p>
+<p>The key point is that how can we line their children together?<br>We define three pointer:</p>
+<ul>
+<li>father: which point at the a,b,c,d,e node, we call it father pointer.</li>
+<li>son : which point at a,b,c,d,e node children, we can it son pointer.</li>
+</ul>
+<p>when we traverse between father, we connect their son. Recursivly use this tech.</p>
+<p><strong>Program-02</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(father!=<span class="keyword">null</span>)&#123; <span class="comment">//traverse the father.</span></span><br><span class="line">	<span class="keyword">if</span>(father.left!=<span class="keyword">null</span>) &#123; son.next=father.left;  son=son.next; &#125;</span><br><span class="line">	<span class="keyword">if</span>(father.right!=<span class="keyword">null</span>)&#123; son.next=father.right; son=son.next; &#125;</span><br><span class="line">	father=father.next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Program"><a href="#Program" class="headerlink" title="Program"></a>Program</h2><p>Here we given the complete program about this two problems.</p>
+<p><strong>115 Perfect Tree Solution</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">connect</span><span class="params">(TreeLinkNode root)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(root==<span class="keyword">null</span> || (root.left==<span class="keyword">null</span> &amp;&amp; root.right==<span class="keyword">null</span>)) <span class="keyword">return</span> ;</span><br><span class="line">	connect_1(root.left,root.right);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">connect_1</span><span class="params">(TreeLinkNode left,TreeLinkNode right)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(left!=<span class="keyword">null</span> &amp;&amp; right!=<span class="keyword">null</span>)&#123;</span><br><span class="line">		left.next=right;</span><br><span class="line">		connect_1(left.left,left.right);</span><br><span class="line">		connect_1(left.right,right.left);</span><br><span class="line">		connect_1(right.left,right.right);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>116 Imperfect Tree Solution</strong><br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">connect_</span><span class="params">(TreeLinkNode root)</span></span>&#123;</span><br><span class="line">	TreeLinkNode level=<span class="keyword">new</span> TreeLinkNode(<span class="number">0</span>); </span><br><span class="line">	TreeLinkNode curr=level; level.next=root;</span><br><span class="line">	<span class="keyword">while</span>(root!=<span class="keyword">null</span>)&#123;</span><br><span class="line">		curr=level;</span><br><span class="line">		<span class="keyword">while</span>(root!=<span class="keyword">null</span>)&#123; </span><br><span class="line">			<span class="keyword">if</span>(root.left!=<span class="keyword">null</span>) &#123; curr.next=root.left;  curr=curr.next; &#125;</span><br><span class="line">			<span class="keyword">if</span>(root.right!=<span class="keyword">null</span>)&#123; curr.next=root.right; curr=curr.next; &#125;</span><br><span class="line">			root=root.next;</span><br><span class="line">		&#125;</span><br><span class="line">		root=level.next;</span><br><span class="line">		level.next=<span class="keyword">null</span>;		</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -232,13 +260,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2016/01/04/max-points-on-line/">149.Max points on line</a></p>
+        <p><span>本文标题:</span><a href="/2016/01/08/populating-next-right-pointers-in-each-node/">116. Populating Next Right Pointers In Each Node</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Algorithm Hackers 的个人博客">Algorithm Hackers</a></p>
-        <p><span>发布时间:</span>2016年01月04日 - 18时32分</p>
-        <p><span>最后更新:</span>2016年01月05日 - 13时52分</p>
+        <p><span>发布时间:</span>2016年01月08日 - 17时30分</p>
+        <p><span>最后更新:</span>2016年01月08日 - 17时39分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2016/01/04/max-points-on-line/" title="149.Max points on line">http://AlgorithmHackers14.github.io/2016/01/04/max-points-on-line/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://AlgorithmHackers14.github.io/2016/01/04/max-points-on-line/　　作者: Algorithm Hackers" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2016/01/08/populating-next-right-pointers-in-each-node/" title="116. Populating Next Right Pointers In Each Node">http://AlgorithmHackers14.github.io/2016/01/08/populating-next-right-pointers-in-each-node/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://AlgorithmHackers14.github.io/2016/01/08/populating-next-right-pointers-in-each-node/　　作者: Algorithm Hackers" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -251,16 +279,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/01/05/restore-ip-address/">
-                    93.Restore IP Addresses
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/01/04/n-queens2/">
-                    52.N-queens II
+                <a href="/2016/01/05/restore-ip-address/">
+                    93.Restore IP Addresses
                 </a>
             </div>
         
@@ -271,7 +293,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Max_Points_on_a_Line"><span class="toc-number">1.</span> <span class="toc-text">Max Points on a Line</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Prefix"><span class="toc-number">1.1.</span> <span class="toc-text">Prefix</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Attention"><span class="toc-number">1.2.</span> <span class="toc-text">Attention</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Code_in_C"><span class="toc-number">1.3.</span> <span class="toc-text">Code in C</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Additional"><span class="toc-number">1.4.</span> <span class="toc-text">Additional</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Problem_URL"><span class="toc-number">1.</span> <span class="toc-text">Problem URL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Description"><span class="toc-number">2.</span> <span class="toc-text">Description</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Solution"><span class="toc-number">3.</span> <span class="toc-text">Solution</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Program"><span class="toc-number">4.</span> <span class="toc-text">Program</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -338,15 +360,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/01/05/restore-ip-address/" title="上一篇: 93.Restore IP Addresses">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/01/04/n-queens2/" title="下一篇: 52.N-queens II">
+            <a href="/2016/01/05/restore-ip-address/" title="下一篇: 93.Restore IP Addresses">
                 <i class="fa fa-angle-right"></i>
             </a>
         
