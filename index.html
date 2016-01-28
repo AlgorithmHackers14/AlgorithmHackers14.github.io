@@ -109,7 +109,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <a href="/tags/Array/" style="font-size: 10px;">Array</a> <a href="/tags/Backtracking/" style="font-size: 20px;">Backtracking</a> <a href="/tags/DFS/" style="font-size: 10px;">DFS</a> <a href="/tags/Depth-first-Search/" style="font-size: 10px;">Depth-first Search</a> <a href="/tags/DuanShikai/" style="font-size: 10px;">DuanShikai</a> <a href="/tags/Dynamic-Programming/" style="font-size: 10px;">Dynamic Programming</a> <a href="/tags/Greedy/" style="font-size: 10px;">Greedy</a> <a href="/tags/Hash-Table/" style="font-size: 10px;">Hash Table</a> <a href="/tags/JiQiang/" style="font-size: 10px;">JiQiang</a> <a href="/tags/LHearen/" style="font-size: 20px;">LHearen</a> <a href="/tags/Linked-List/" style="font-size: 10px;">Linked List</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/SheYi/" style="font-size: 10px;">SheYi</a> <a href="/tags/String/" style="font-size: 10px;">String</a> <a href="/tags/Tree/" style="font-size: 10px;">Tree</a> <a href="/tags/Zheng-Yingying/" style="font-size: 10px;">Zheng Yingying</a> <a href="/tags/使用说明/" style="font-size: 10px;">使用说明</a>
+                        <a href="/tags/Array/" style="font-size: 10px;">Array</a> <a href="/tags/Backtracking/" style="font-size: 20px;">Backtracking</a> <a href="/tags/DFS/" style="font-size: 10px;">DFS</a> <a href="/tags/Depth-first-Search/" style="font-size: 10px;">Depth-first Search</a> <a href="/tags/DuanShikai/" style="font-size: 10px;">DuanShikai</a> <a href="/tags/Greedy/" style="font-size: 10px;">Greedy</a> <a href="/tags/Hash-Table/" style="font-size: 10px;">Hash Table</a> <a href="/tags/JiQiang/" style="font-size: 10px;">JiQiang</a> <a href="/tags/LHearen/" style="font-size: 20px;">LHearen</a> <a href="/tags/Linked-List/" style="font-size: 10px;">Linked List</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/SheYi/" style="font-size: 10px;">SheYi</a> <a href="/tags/String/" style="font-size: 10px;">String</a> <a href="/tags/Tree/" style="font-size: 10px;">Tree</a> <a href="/tags/Zheng-Yingying/" style="font-size: 10px;">Zheng Yingying</a> <a href="/tags/使用说明/" style="font-size: 10px;">使用说明</a>
                     </div>
                 </section>
                 
@@ -222,97 +222,6 @@
         <p class="article-more-link">
           <a  href="/2016/01/28/jump-game-ii/#more">more >></a>
         </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-    
-        <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-        <script>
-            var yiliaConfig = {
-            fancybox: true,
-            mathjax: true,
-            animate: true,
-            isHome: true,
-            isPost: false,
-            isArchive: false,
-            isTag: false,
-            isCategory: false,
-            open_in_new: false
-            }
-        </script>
-        
-
-  
-    <article id="post-unique-path-ii" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/01/28/unique-path-ii/" class="article-date">
-      <time datetime="2016-01-28T07:36:44.455Z" itemprop="datePublished">2016-01-28</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/28/unique-path-ii/">63.Unique Paths II</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h4 id="Unique_Paths_II"><a href="#Unique_Paths_II" class="headerlink" title="Unique Paths II"></a>Unique Paths II</h4><p><em>Author      : LHearen</em></p>
-<p><em>E-mail      : LHearen@126.com</em></p>
-<p><em>Time        : Sat Jan 23 20:53:00 CST 2016</em></p>
-<p><em>Description : Follow up for Unique Paths: Now consider if some obstacles are added to the grids. How many unique paths would there be? An obstacle and empty space is marked as 1 and 0 respectively in the grid.</em></p>
-<p><em>Source      : <a href="https://leetcode.com/problems/unique-paths-ii/" target="_blank" rel="external">https://leetcode.com/problems/unique-paths-ii/</a></em></p>
-<h4 id="Specification"><a href="#Specification" class="headerlink" title="Specification"></a>Specification</h4><p>There is a direct way as UniquePaths, but that will definitely make the solution hard to realize and the complexity in space and time cost is rather high. At this very moment, we can spot one special feature in this problem, over-lapping sub-problems and the direct way will take lots of time to do the same sub-problems and that is why it will cost so much. So to improve the performance, we should try to store the handled sub-problems for later use and as a result we can try <em>Memoization</em> to hack it first; since <em>Memoization</em> can be simply used, then the <em>Dynamic Programming</em> might be helpful, so we will have the second solution. </p>
-<p>Both of them will cost O(row*column) in space and time complexity.</p>
-<h4 id="Solution_1_-_Memoization"><a href="#Solution_1_-_Memoization" class="headerlink" title="Solution 1 - Memoization"></a>Solution 1 - Memoization</h4><p>To fully make use of the outstanding features of DP, we have to allocate an array to store the states for each position and initialize them to -1 for checking whether it is handled already or not, and when it is handled, we can then directly use it to further decrease time cost. As we can easily understand, when there is a block in the <strong>position</strong> the path will be set as 0 and all others will be determined by the left and upper position and before we continue we will record the current result to the array for re-use.</p>
-<h5 id="Code_in_C_-_4ms_3B"><a href="#Code_in_C_-_4ms_3B" class="headerlink" title="Code in C - 4ms;"></a>Code in C - 4ms;</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int traverse(int** grid, int row, int col, int** arrs)&#10;&#123;&#10;    if(row &#60; 0 || col &#60; 0)&#10;        return 0;&#10;    if(arrs[row][col] != -1)&#10;        return arrs[row][col];&#10;    int count = 0;&#10;    if(grid[row][col] == 1)&#10;        count = 0;&#10;    else if(row == 0 &#38;&#38; col == 0)&#10;        count = 1;&#10;    else&#10;        count = traverse(grid, row-1, col, arrs) + traverse(grid, row, col-1, arrs);&#10;    arrs[row][col] = count;&#10;    return count;&#10;&#125;&#10;&#10;//AC - 4ms;&#10;int uniquePathsWithObstacles1(int** grid, int rSize, int cSize)&#10;&#123;&#10;    int **arrs = (int**)malloc(sizeof(int*)*rSize);&#10;    for(int i = 0; i &#60; rSize; i++)&#10;    &#123;&#10;        arrs[i] = (int*)malloc(sizeof(int)*cSize);&#10;        for(int j = 0; j &#60; cSize; j++)&#10;            arrs[i][j] = -1;&#10;    &#125;&#10;    traverse(grid, rSize-1, cSize-1, arrs);&#10;    return arrs[rSize-1][cSize-1];&#10;&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="Solution_2_-_Dynamic_Programming"><a href="#Solution_2_-_Dynamic_Programming" class="headerlink" title="Solution 2 - Dynamic Programming"></a>Solution 2 - Dynamic Programming</h4><p>As we can see, the previous solution will demand initialization before traversal and then in each recursion there will also require further function invoking, to further improve the performance and save time cost, we can have a try at Dynamic Programming which is a bottom-up method and the major clues are quite the same as the previous one.</p>
-<h5 id="Code_in_C_-_0ms_3B"><a href="#Code_in_C_-_0ms_3B" class="headerlink" title="Code in C - 0ms;"></a>Code in C - 0ms;</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//AC - 0ms;&#10;int uniquePathsWithObstacles0(int** grid, int rSize, int cSize)&#10;&#123;&#10;    int** arrs = (int**)malloc(sizeof(int*)*rSize);&#10;    for(int i = 0; i &#60; rSize; i++)&#10;        arrs[i] = (int*)malloc(sizeof(int)*cSize);&#10;    for(int i = 0; i &#60; rSize; i++)&#10;        for(int j = 0; j &#60; cSize; j++)&#10;        &#123;&#10;            if(i==0 &#38;&#38; j==0 &#38;&#38; grid[i][j]==0)&#10;            &#123;&#10;                arrs[i][j] = 1;&#10;                continue;&#10;            &#125;&#10;            if(grid[i][j] == 1)&#10;            &#123;&#10;                arrs[i][j] = 0;&#10;                continue;&#10;            &#125;&#10;            int count = 0;&#10;            if(j-1 &#62; -1)&#10;                count += arrs[i][j-1];&#10;            if(i-1 &#62; -1)&#10;                count += arrs[i-1][j];&#10;            arrs[i][j] = count;&#10;        &#125;&#10;    return arrs[rSize-1][cSize-1];&#10;&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="Additional"><a href="#Additional" class="headerlink" title="Additional"></a>Additional</h5><p>There must be some better solutions to this problem, if you’ve got one, please never hesitate to inform me of that, so many thanks in advance!</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/week8/">week8</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Dynamic-Programming/">Dynamic Programming</a></li></ul>
-    </div>
-
       
       <div class="clearfix"></div>
     </div>
